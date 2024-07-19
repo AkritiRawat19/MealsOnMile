@@ -1,0 +1,218 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+/* Navigation Bar */
+#navbar {
+  display: flex;
+  align-items: center;
+  /* It will go over its parent(background image) */
+  position: absolute;
+  width: 1519px;
+  top: 0px;
+}
+
+/* to cover the background with a strip of black  color */
+#navbar::before {
+  content: "";
+  background-color: black;
+  opacity: 100%;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  /* to make the text visible over the strip */
+  z-index: -1;
+}
+
+/* Navigation Bar: Logo And Image */
+#logo {
+  margin: 2px 5px;
+}
+
+#logo img {
+  filter: invert(100%);
+  height: 80px;
+  width: 85px;
+  border: 2px solid black;
+  border-radius: 100%;
+}
+
+/* Navigation Bar: List Styling */
+#navbar ul {
+  display: flex;
+  font-family: "Bree Serif", serif;
+}
+
+#navbar ul li {
+  /* to remove bullets */
+  list-style: none;
+  font-size: 25px;
+}
+
+#navbar ul li a {
+  color: white;
+  /* by default inline - for padding block the display */
+  display: block;
+  padding: 3px 22px;
+  border-radius: 20px;
+  /* to remove underline */
+  text-decoration: none;
+}
+
+#navbar ul li a:hover {
+  color: black;
+  background-color: white;
+}
+
+#navbar ul li a#active {
+  text-decoration: underline;
+  color: greenyellow;
+}
+
+#navbar ul li a#active:hover {
+  background-color: greenyellow;
+  color: black;
+}
+
+/* Service Section */
+#service {
+  display: flex;
+  /* flex-direction: column; */
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  /* justify-content: center;
+    align-items: center; */
+  font-size: 60px;
+  color: aliceblue;
+}
+
+#service::before {
+  content: "";
+  position: absolute;
+  /* (../) - It is used to move into another folder. */
+  background: url("../Image/service\ background\ 2.jpg") no-repeat center
+    center/cover;
+  opacity: 0.95;
+  height: 100%;
+  width: 100%;
+  /* to make the text visible over the strip */
+  z-index: -1;
+}
+
+#service .para {
+  padding-top: 130px;
+  padding-left: 50px;
+}
+
+#service .para #two {
+  color: rgb(142, 218, 220);
+}
+
+#service .search-container {
+  padding-left: 200px;
+}
+
+#service .search-container #search {
+  width: 500px;
+  height: 32px;
+  border-radius: 10px;
+  border: 3px solid black;
+  font-family: "Courier New", Courier, monospace;
+  font-size: large;
+  color: grey;
+  padding-left: 5px;
+}
+
+#service .search-container button {
+  width: 72px;
+  height: 36px;
+  border-radius: 10px;
+  border: 3px solid black;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+#service .search-container button:hover {
+  background-color: rgb(87, 44, 44);
+  color: white;
+  cursor: pointer;
+}
+
+#service .extra p {
+  margin-top: 40px;
+  margin-left: 280px;
+  font-size: 40px;
+  color: rgb(126, 214, 185);
+}
+
+/* Menu */
+
+.menu-container {
+  margin-top: 40px;
+  background: url("../Image/service\ background\ 3.jpg") no-repeat center
+    center/cover;
+  margin-top: 280px;
+  height: 550px;
+}
+
+.menu-container .flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.menu-container .flex .menu {
+  border: 3px solid black;
+  border-radius: 20px;
+  background-color: rgba(36, 4, 4, 0.779);
+  height: 416px;
+  width: 450px;
+  margin: 20px;
+  color: white;
+}
+
+.menu-container .flex .menu img {
+  height: 150px;
+  display: block;
+  margin: auto;
+}
+
+#VegMenu {
+  width: 90%;
+  height: 200px;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: rgb(56, 14, 14);
+  color: rgb(188, 180, 147);
+  margin-left: 13px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  cursor: pointer;
+}
+
+#VegMenu :hover {
+  color: black;
+  background-color: rgb(191, 102, 102);
+}
+
+select option:checked {
+  background-color: rgba(238,172,172,0.943); /* Change the background color of selected options */
+  color: black; /* Change the text color of selected options */
+}
+
+/* Utility Classes */
+.primarycenter {
+  text-align: center;
+  font-size: 65px;
+  color: rgba(116, 4, 4, 0.994);
+}
+.secondarycenter {
+  text-align: center;
+  font-size: 40px;
+}
