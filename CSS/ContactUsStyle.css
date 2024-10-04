@@ -1,0 +1,165 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+  }
+  /* Navigation Bar */
+  #navbar {
+    display: flex;
+    align-items: center;
+    /* It will go over its parent(background image) */
+    position: absolute;
+    width: 1519px;
+    top: 0px;
+  }
+  
+  /* to cover the background with a strip of black  color */
+  #navbar::before {
+    content: "";
+    background-color: black;
+    opacity: 100%;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /* to make the text visible over the strip */
+    z-index: -1;
+  }
+  
+  /* Navigation Bar: Logo And Image */
+  #logo {
+    margin: 2px 5px;
+  }
+  
+  #logo img {
+    filter: invert(100%);
+    height: 80px;
+    width: 85px;
+    border: 2px solid black;
+    border-radius: 100%;
+  }
+  
+  /* Navigation Bar: List Styling */
+  #navbar ul {
+    display: flex;
+    font-family: "Bree Serif", serif;
+  }
+  
+  #navbar ul li {
+    /* to remove bullets */
+    list-style: none;
+    font-size: 25px;
+  }
+  
+  #navbar ul li a {
+    color: white;
+    /* by default inline - for padding block the display */
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    /* to remove underline */
+    text-decoration: none;
+  }
+  
+  #navbar ul li a:hover {
+    color: black;
+    background-color: white;
+  }
+  
+  #navbar ul li a#active {
+    text-decoration: underline;
+    color: greenyellow;
+  }
+  
+  #navbar ul li a#active:hover {
+    background-color: greenyellow;
+    color: black;
+  }
+
+  body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.contact-us {
+    display: flex;
+    /* flex-direction: column; */
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    /* justify-content: center;
+      align-items: center; */
+    font-size: 60px;
+    color: aliceblue;
+  }
+  
+  .contact-us::before {
+    content: "";
+    position: absolute;
+    /* (../) - It is used to move into another folder. */
+    background: url("../Image/background6.jpg") no-repeat center
+      center/cover;
+    opacity: 0.90;
+    height: 777px;
+    width: 100%;
+    /* to make the text visible over the strip */
+    z-index: -1;
+    
+  }
+
+.contact-us .container {
+    max-width: 900px;
+    margin: 123px auto;
+    margin-bottom: 0%;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contact-us h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 50px;
+}
+
+.contact-us p {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+.contact-us .form-group {
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.contact-us label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-us input, .contact-us textarea {
+    width: 879px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact-us button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #ff6600;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 17px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-us button:hover {
+    background-color: #f7560bbf;
+}

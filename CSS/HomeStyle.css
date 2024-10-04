@@ -1,0 +1,284 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* CSS Variables */
+:root {
+  --navbar-height: 59px;
+}
+
+/* Navigation Bar */
+#navbar {
+  display: flex;
+  align-items: center;
+  /* It will go over its parent(background image) */
+  position: absolute;
+  width: 1519px;
+  top: 0px;
+
+}
+
+/* to cover the background with a strip of black  color */
+#navbar::before {
+  content: "";
+  background-color: black;
+  opacity: 100%;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  /* to make the text visible over the strip */
+  z-index: -1;
+}
+
+/* Navigation Bar: Logo And Image */
+#logo {
+  margin: 2px 5px;
+}
+
+#logo img {
+  filter: invert(100%);
+  height: 80px;
+  width: 85px;
+  border: 2px solid black;
+  border-radius: 100%;
+}
+
+/* Navigation Bar: List Styling */
+#navbar ul {
+  display: flex;
+  font-family: "Bree Serif", serif;
+}
+
+#navbar ul li {
+  /* to remove bullets */
+  list-style: none;
+  font-size: 25px;
+}
+
+#navbar ul li a {
+  color: white;
+  /* by default inline - for padding block the display */
+  display: block;
+  padding: 3px 22px;
+  border-radius: 20px;
+  /* to remove underline */
+  text-decoration: none;
+}
+
+#navbar ul li a:hover {
+  color: black;
+  background-color: white;
+}
+
+#navbar ul li a#active {
+  text-decoration: underline;
+  color: greenyellow;
+}
+
+#navbar ul li a#active:hover {
+  background-color: greenyellow;
+  color: black;
+}
+
+
+/* HOME SECTION */
+#home {
+  display: flex;
+  flex-direction: column;
+  padding-top: 193px;
+  padding-bottom: 0px;
+  padding-left: 40px;
+  padding-right: 40px;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+#home::before {
+  content: "";
+  position: absolute;
+  /* (../) - It is used to move into another folder. */
+  background: url("../Image/background1.jpg") no-repeat center center/cover;
+  opacity: 0.91;
+  height: 100%;
+  width: 100%;
+  /* to make the text visible over the strip */
+  z-index: -1;
+}
+
+#home h1 {
+  color: white;
+  text-align: center;
+  font-family: "Roboto Slab", serif;
+}
+
+#home h2 {
+  color: white;
+  text-align: center;
+  font-family: "Roboto Slab", serif;
+}
+
+#home p {
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: "Roboto Slab", serif;
+}
+
+
+/* SERVICES SECTION */
+#services {
+  /* margin: 30px; */
+  display: flex;
+}
+
+.services-container {
+  background: url("../Image/background4.jpg") no-repeat center/cover;
+  margin-top: 198px;
+  height: 580px;
+}
+
+#services .box {
+  border: 3px solid rgb(67, 24, 24);
+  padding: 20px;
+  margin: 10px;
+  border-radius: 20px;
+  background-color: rgba(97, 38, 4, 0.6);
+  height: 425px;
+  color: white;
+  font-size: 20px;
+}
+
+#services .box img {
+  height: 200px;
+  display: block;
+  margin: auto;
+}
+
+#services.box img p {
+  font-family: "Roboto Slab", serif;
+}
+
+/* Clients Section */
+#client-section {
+  position: relative;
+  height: 100%;
+}
+
+#client-section::before {
+  content: "";
+  position: absolute;
+  background: url("../Image/background2.jpg") no-repeat center center/cover;
+  width: 100%;
+  height: 200px;
+  z-index: -1;
+  opacity: 0.7;
+}
+
+#clients {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 130px;
+}
+
+.client-item {
+  padding: 20px;
+}
+
+#clients img {
+  height: 100px;
+}
+
+/* Contact Section */
+#contact{
+  position: relative;
+  height: 100%;
+}
+
+#contact::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.9;
+  background: url("../Image/background3.jpg")no-repeat center center/cover;
+
+}
+
+footer{
+  background-color: black;
+  color: white;
+  padding: 5px 15px;
+}
+
+#contact-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 34px;
+}
+
+#contact-box input, #contact-box textarea{
+  width: 100%;
+  padding: 0.5rem;
+  border: 2px solid black;
+  border-radius: 9px;
+  font-size: 1.1rem;
+
+}
+
+#contact-box form{
+  width: 40%;
+}
+
+#contact-box label{
+  font-size: 1.4rem;
+  font-family: "Roboto Slab", serif;
+  
+}
+
+/* Utility Classes */
+.h-primary {
+  font-family: "Roboto Slab", serif;
+  font-size: 3.3rem;
+  padding: 0px;
+ 
+}
+
+.h-secondary {
+  font-family: "Roboto Slab", serif;
+  font-size: 2.1rem;
+  padding: 12px;
+  color: aliceblue;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 6px 20px;
+  margin: 17px;
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: rgb(66, 24, 24);
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.btn a{
+  text-decoration: none;
+  color: rgba(240, 248, 255, 0.878);
+}
+
+.btn:hover{
+  background-color: black;
+  color:white;
+  border: 2px solid white;
+  
+}
+
+.center {
+  text-align: center;
+}

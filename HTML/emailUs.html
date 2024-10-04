@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services</title>
+    <link rel="stylesheet" href="../CSS/EmaiUsStyle.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Roboto+Slab&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav id="navbar">
+      <div id="logo">
+        <img src="..\Image\logo1.jpg" alt="MealsOnMile.com" />
+      </div>
+      <ul>
+        <!-- li.item{<a href=""></a>}*5 -->
+        <li class="item"><a href="index.html">Home</a></li>
+        <li class="item"><a href="services.html">Services</a></li>
+        <li class="item"><a href="aboutUs.html">About Us</a></li>
+        <li class="item"><a href="contactUs.html">contact Us</a></li>
+        <li class="item"><a id="active" href="emailUs.html">Email Us</a></li>
+      </ul>
+    </nav>
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MealsOnMile - Email Us</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <section id="email-section">
+            <div class="overlay">
+                <div class="content">
+                    <h2>Email Us</h2>
+                    <p>If you have any questions, feel free to reach out to us at <a href="mailto:info@mealsonmile.com">info@mealsonmile.com</a></p>
+                    <form id="contact-form">
+                        <label for="name">Your Good Name:</label>
+                        <input type="text" id="name" name="name" required>
+                        
+                        <label for="email">Your Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        
+                        <label for="message">Query:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                        
+                        <label for="rating">How would you rate us?</label>
+                        <select id="rating" name="rating" required>
+                            <option value="1">1 - Excellent</option>
+                            <option value="2">2 - Good</option>
+                            <option value="3">3 - Average</option>
+                            <option value="4">4 - Ok Ok</option>
+                            <option value="5">5 - Poor</option>
+                        </select>
+                        
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+       <script src="../EmailUs.js"></script>
+    </body>
+    </html>
+    
+
+  </body>
+</html>

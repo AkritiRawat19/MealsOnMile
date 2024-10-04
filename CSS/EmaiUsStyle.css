@@ -1,0 +1,180 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+  }
+  /* Navigation Bar */
+  #navbar {
+    display: flex;
+    align-items: center;
+    /* It will go over its parent(background image) */
+    position: absolute;
+    width: 1519px;
+    top: 0px;
+  }
+  
+  /* to cover the background with a strip of black  color */
+  #navbar::before {
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /* to make the text visible over the strip */
+    z-index: -1;
+  }
+  
+  /* Navigation Bar: Logo And Image */
+  #logo {
+    margin: 2px 5px;
+  }
+  
+  #logo img {
+    filter: invert(100%);
+    height: 80px;
+    width: 85px;
+    border: 2px solid black;
+    border-radius: 100%;
+  }
+  
+  /* Navigation Bar: List Styling */
+  #navbar ul {
+    display: flex;
+    font-family: "Bree Serif", serif;
+  }
+  
+  #navbar ul li {
+    /* to remove bullets */
+    list-style: none;
+    font-size: 25px;
+  }
+  
+  #navbar ul li a {
+    color: white;
+    /* by default inline - for padding block the display */
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    /* to remove underline */
+    text-decoration: none;
+  }
+  
+  #navbar ul li a:hover {
+    color: black;
+    background-color: white;
+  }
+  
+  #navbar ul li a#active {
+    text-decoration: underline;
+    color: greenyellow;
+  }
+  
+  #navbar ul li a#active:hover {
+    background-color: greenyellow;
+    color: black;
+  }
+
+  /* Email Us Section */
+  body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+#email-section  {
+    display: flex;
+    /* flex-direction: column; */
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    /* justify-content: center;
+      align-items: center; */
+    font-size: 60px;
+    color: aliceblue;
+  }
+  
+  #email-section::before {
+    content: "";
+    position: absolute;
+    /* (../) - It is used to move into another folder. */
+    background: url("../Image/background7.jpg") no-repeat center
+      center/cover;
+    opacity: 0.9;
+    height: 913px;
+    width: 100%;
+    /* to make the text visible over the strip */
+    z-index: -1;
+  }
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+
+/* .overlay {
+   
+    
+} */
+
+.content {
+  margin-top: 120px;
+  margin-left: 320px;
+    text-align: center;
+    max-width: 850px;
+    height: 720px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.677);
+    border-radius: 10px;
+}
+
+.content h2 {
+    margin-bottom: 20px;
+    font-size: 50px;
+}
+
+.content p {
+    margin-bottom: 20px;
+    font-size:30px
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact-form label {
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+#contact-form input,
+#contact-form textarea,
+#contact-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+#contact-form button {
+    padding: 10px 20px;
+    background: #f66154;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background 0.1s;
+    font-size: 25px;
+}
+
+#contact-form button:hover {
+    background: #9a211b;
+}
